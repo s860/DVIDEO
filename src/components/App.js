@@ -7,10 +7,9 @@ import './App.css';
 
 //Declare IPFS
 const ipfsClient = require('ipfs-http-client')
-const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' }) // leaving out the arguments will default to these values
+const ipfs = ipfsClient({ host: 'ipfs.infura.io', port: 5001, protocol: 'https' })  // leaving out the arguments will default to these values
 
 class App extends Component {
-
 
   async componentWillMount() {
     await this.loadWeb3()
@@ -19,7 +18,7 @@ class App extends Component {
 
   async loadWeb3() {
     if (window.ethereum) {
-      window.web3 = new Web3(window.ethereum)
+        window.web3 = new Web3(window.ethereum)
       await window.ethereum.enable()
     }
     else if (window.web3) {
@@ -142,7 +141,7 @@ class App extends Component {
      account:'',
      dvideo: null,
      videos:[],
-     loading: true,
+     loading: false,
      currentHash: null,
      currentTitle: null
      // loading: false,

@@ -27,7 +27,7 @@ class Main extends Component {
               this.props.uploadVideo(title)
             }} >
               &nbsp;
-              <input type='file' accept=".mp4, .mkv .ogg .wmv" onChange={this.props.captureFile} style={{ width: '250px' }} />
+               <input type='file' accept=".mp4, .mkv .ogg .wmv" onChange={this.props.captureFile} style={{ width: '250px' }} />
                 <div className="form-group mr-sm-2">
                   <input
                     id="videoTitle"
